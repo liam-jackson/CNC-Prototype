@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+import "system-health/system_status_request.proto";
+import "system-health/system_status_response.proto";
+import "motor/motor_status_request.proto";
+import "motor/motor_status_response.proto";
+import "path-planner/path_request.proto";
+import "path-planner/path_response.proto";
+import "tool/tool_status_request.proto";
+import "tool/tool_status_response.proto";
+
+service CncController {
+  rpc GetSystemStatus(SystemStatusRequest) returns (SystemStatusResponse);
+  rpc GetMotorStatus(MotorStatusRequest) returns (MotorStatusResponse);
+  rpc GetToolStatus(ToolStatusRequest) returns (ToolStatusResponse);
+  rpc SetToolStatus(ToolStatusRequest) returns (ToolStatusResponse);
+  rpc QueuePathSegments(PathRequest) returns (PathResponse);
+}

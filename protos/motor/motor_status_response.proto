@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+import "motor/motor_status.proto";
+
+message MotorStatusResponse { repeated MotorStatus motor_statuses = 1; }

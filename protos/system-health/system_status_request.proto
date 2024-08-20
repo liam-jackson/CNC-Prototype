@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+message SystemStatusRequest {
+  // Empty message
+}

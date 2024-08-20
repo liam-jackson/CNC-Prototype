@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+message PathResponse {
+  bool success = 1;
+  optional string message = 2;
+}

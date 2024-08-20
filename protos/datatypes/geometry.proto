@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+message Point2D {
+  double x = 1;
+  double y = 2;
+}
+
+message Point3D {
+  double x = 1;
+  double y = 2;
+  double z = 3;
+}
+
+message Quaternion {
+  double x = 1;
+  double y = 2;
+  double z = 3;
+  double w = 4;
+}

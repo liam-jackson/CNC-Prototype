@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+enum ResponseFlags {
+  option allow_alias = true;
+  RESPONSE_FLAG_UNSPECIFIED = 0;
+  RESPONSE_FLAG_OK = 1;
+  RESPONSE_FLAG_ACK = 1;
+  RESPONSE_FLAG_NACK = 2;
+}

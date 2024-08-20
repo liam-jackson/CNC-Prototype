@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+import "path-planner/path.proto";
+
+message PathRequest { repeated PathSegment segments = 1; }

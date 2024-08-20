@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+import "datatypes/communication_flags.proto";
+import "tool/tool_params.proto";
+
+message ToolStatusResponse {
+  ResponseFlags response = 1;
+  ToolParams tool_params = 2;
+}

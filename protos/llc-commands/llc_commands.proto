@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+import "datatypes/geometry.proto";
+import "path-planner/path.proto";
+
+enum GCodeG {
+  option allow_alias = true;
+  GCODE_G0 = 0;
+  GCODE_G1 = 0;
+  GCODE_G2 = 2;
+  GCODE_G3 = 3;
+  // ... etc.
+}
+
+enum GCodeM {
+  GCODE_M0 = 0;
+  GCODE_M1 = 1;
+  GCODE_M2 = 2;
+  GCODE_M3 = 3;
+  // ... etc.
+}
+
+message MoveLinear {
+  PathWaypoint start = 1;
+  PathWaypoint end = 2;
+  double feedrate = 3;
+}
+
+message MoveTo {
+  PathWaypoint target = 1;
+  double feedrate = 2;
+}

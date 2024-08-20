@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+import "datatypes/geometry.proto";
+import "tool/tool_params.proto";
+
+message PathWaypoint {
+  oneof waypoint {
+    Point2D point_2d = 1;
+    Point3D point_3d = 2;
+  }
+}
+
+message PathSegment {
+  // The start and end points of the segment along with gantry speed
+  Point2D start = 1;
+  Point2D end = 2;
+  double speed = 3;
+
+  // The tool parameters for the path segment
+  ToolParams tool_params = 4;
+  PathWaypoint tool_enable_pos = 5;
+  PathWaypoint tool_disable_pos = 6;
+}

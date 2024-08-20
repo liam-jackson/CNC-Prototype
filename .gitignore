@@ -1,5 +1,13 @@
-**.history/*
-**.vscode/*
-**.pytest_cache/*
-**/__pycache__/*
+**.history/
+**.vscode/
+*cache*
+
+# C#
+cnc-csharp/src/obj/*
+cnc-csharp/src/bin/*
+
+# Python
+**/.pytest_cache/
+**/__pycache__/
 **/*.py[ci]
+**/*pb2*py

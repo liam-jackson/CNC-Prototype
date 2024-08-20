@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+message MotorStatus {
+  int32 motor_id = 1;
+  bool motor_enabled = 2;
+  double motor_speed = 3;
+  bool motor_moving = 4;
+}

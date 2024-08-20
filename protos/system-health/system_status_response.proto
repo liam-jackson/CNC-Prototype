@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+import "system-health/system_status.proto";
+
+message SystemStatusResponse {
+  SystemStatus status = 1;
+  optional string message = 2;
+}

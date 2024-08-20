@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "CNC_Prototype";
+
+package cncserver;
+
+message ToolParams {
+  bool enabled = 1;
+  double power = 2;
+  double z_offset = 3;
+}
